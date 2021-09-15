@@ -1,0 +1,11 @@
+name: TEST
+
+on:
+  push:
+
+jobs:
+  release:
+    if: ${{ github.ref##*/ == 'main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${GITHUB_REF##*/}"
