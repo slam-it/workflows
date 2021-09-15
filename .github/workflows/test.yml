@@ -6,8 +6,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      TAG: $(git describe --tags $(git rev-list --tags --max-count=1))
+      BRAMCH_NAME: ${GITHUB_REF##*/}
     steps:
       - run: echo "$branch_name $TAG"
-        env:
-          branch_name: $GITHUB_REF##*/
-          TAG: ${(git describe --tags $(git rev-list --tags --max-count=1))}
