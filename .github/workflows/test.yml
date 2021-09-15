@@ -9,5 +9,5 @@ jobs:
     steps:
       - run: echo "$branch_name $TAG"
         env:
-          branch_name: ${{GITHUB_REF##*/}}
+          branch_name: $GITHUB_REF##*/
           TAG: ${(git describe --tags $(git rev-list --tags --max-count=1))}
