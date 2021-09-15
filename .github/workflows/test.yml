@@ -3,11 +3,12 @@ name: TEST
 on:
   push:
 
+env:
+  TAG: $(git describe --tags $(git rev-list --tags --max-count=1))
+  BRAMCH_NAME: ${GITHUB_REF##*/}
+      
 jobs:
   release:
-    if: ${{ github.ref##*/ == 'main' }}
     runs-on: ubuntu-latest
-    env:
-      BRANCH_NAME = ${GITHUB_REF##*/}
     steps:
-      - run: echo "${BRANCH_NAME}"
+      - run: echo "${{ env.BRAMCH_NAME }} ${{ env.TAG }}"
