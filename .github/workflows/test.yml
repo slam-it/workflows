@@ -6,7 +6,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    env:
-      BRANCH_NAME: ${GITHUB_REF##*/}
     steps:
-      - run: echo "${BRANCH_NAME}"
+      - run: echo "$branch_name"
+        env: 
+          branch_name: ${GITHUB_REF##*/}
