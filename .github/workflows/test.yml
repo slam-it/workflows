@@ -5,6 +5,7 @@ on:
 
 env:
   TAG: $(git describe --tags $(git rev-list --tags --max-count=1) 2>/dev/null || echo 'v1.0.0')
+  PULL_REQUEST: ${github.payload.pull_request.head.ref}
   BRAMCH_NAME: ${GITHUB_REF##*/}
 
 jobs:
@@ -12,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "${{ env.BRAMCH_NAME }} ${{ env.TAG }}"
+      - run: echo "${{ env.PULL_REQUEST }}${{ env.BRAMCH_NAME }} ${{ env.TAG }}"
