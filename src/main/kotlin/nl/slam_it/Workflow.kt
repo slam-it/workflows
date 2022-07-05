@@ -2,5 +2,5 @@ package nl.slam_it
 
 class Workflow {
 
-    fun getWorkflow() = "workflow"
+    fun getWorkflow() = "workflow bug fix"
 }
