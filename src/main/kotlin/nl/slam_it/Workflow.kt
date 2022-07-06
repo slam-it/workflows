@@ -4,5 +4,4 @@ class Workflow {
 
     fun getWorkflow() = "workflow bug fix"
 
-    fun getNewWorkflow() = "new workflow"
 }
