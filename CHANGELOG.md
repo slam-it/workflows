@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/slam-it/workflows/compare/v2.0.0...v2.1.0) (2022-07-06)
+
+
+### Features
+
+* :sparkles: added double print workflow feature ([c723d9f](https://github.com/slam-it/workflows/commit/c723d9f7cfb74be52d7b64b51dbaa975b6816e79))
+
 ## [2.0.0](https://github.com/slam-it/workflows/compare/v1.0.0...v2.0.0) (2022-07-06)
 
 
